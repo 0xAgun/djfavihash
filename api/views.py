@@ -35,7 +35,7 @@ order_by = openapi.Parameter('urls', openapi.IN_QUERY,
 class favicon(APIView):
 
     @swagger_auto_schema(
-        operation_description="apiview post description override",
+        operation_description="enter urls for the hash. use json urls key",
         request_body=openapi.Schema(
             type=openapi.TYPE_OBJECT,
             required=['urls'],
