@@ -1,0 +1,1 @@
+web: gunicorn favihash.wsgi --log-file -
