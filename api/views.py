@@ -52,8 +52,8 @@ class favicon(APIView):
             if (response.status_code != 404):
                 favicon = codecs.encode(response.content,"base64")
                 hash_favicon = mmh3.hash(favicon)
-                print(hash_favicon)
-                return Response(hash_favicon)
+                prefix = {"hash": hash_favicon}
+                return Response(prefix)
         except Exception as e:
             varialbe = {"failed": "there was an error to generating hash"}
             return Response(varialbe)
